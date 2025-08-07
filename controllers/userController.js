@@ -181,7 +181,7 @@ export const forgotPassword = async (req, res) => {
         user.resetTokenExpiration = Date.now() + 3600000; // 1 hour
         await user.save();
 
-        const resetURL = `http://localhost:5173/reset-password/${resetToken}`;
+        const resetURL = `https://fiesta-finder.vercel.app/reset-password/${resetToken}`;
         const html = `
             <div style="text-align: center; font-family: Arial, sans-serif;">
                 <img src="YOUR_LOGO_URL" alt="Fiesta Finder Logo" style="width: 150px; height: auto;"/>

@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-        origin: 'http://localhost:5173', // Allow frontend
+        origin: 'https://fiesta-finder.vercel.app', // Allow frontend
         credentials: true, // Allow cookies
     })
 );
