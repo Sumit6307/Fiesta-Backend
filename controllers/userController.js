@@ -28,7 +28,7 @@ export const registerUser = async (req, res) => {
         await newUser.save();
 
         const verificationToken = jwt.sign({ email }, process.env.JWT_SECRET, { expiresIn: '1h' });
-        const verificationURL = `http://localhost:5173/verify/${verificationToken}`;
+        const verificationURL = `https://fiesta-finder.vercel.app/verify/${verificationToken}`;
 
         const html = `
             <div style="text-align: center; font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
